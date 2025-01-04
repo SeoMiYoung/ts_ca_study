@@ -1,2 +1,2 @@
-let 이름 :string = 'kim';  // 이 변수엔 string(문자) type만 들어올 수 있습니다.
+let 이름 :string[] = ['kim', 'park'];  // 이 변수엔 array가 와야하는데, 그 array안에는 string 요소만 가능!
 이름 = 123;  // 에러가 발생할거임 
