@@ -1,7 +1,3 @@
-function 함수(x :number) :number{
-    // 이 함수는 파라미터로 number
-    // return 값으로 number
-    return x * 2
-}
-함수('123') // 에러 발생
-함수(123) // 에러 안남
+type Member = [number, boolean];
+let john:Member = [123, true]
+// [참고] 튜플 타입: https://velog.io/@from_numpy/TypeScript-Tuple%ED%8A%9C%ED%94%8C
