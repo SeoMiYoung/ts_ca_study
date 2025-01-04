@@ -3,3 +3,5 @@ function 함수(x :number) :number{
     // return 값으로 number
     return x * 2
 }
+함수('123') // 에러 발생
+함수(123) // 에러 안남
