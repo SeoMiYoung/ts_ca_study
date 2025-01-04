@@ -1,5 +1,6 @@
-type Member = {
-    [key :string] : string
-    // 글자로 된 모든 object 속성의 타입은 string
+class User {
+    name :string;
+    constructor(name : string) {
+        this.name = name;
+    }
 }
-let john : Member = { name : 'kim' }
