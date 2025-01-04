@@ -1,2 +1,1 @@
-let 이름 :{ name? : string } = { name : 'kim'}; 
-이름 = 123;  // 에러가 발생할거임 
+let 이름:string | number = 'kim'; // string 또는 number
