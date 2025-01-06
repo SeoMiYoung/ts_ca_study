@@ -1,31 +1,26 @@
-// [숙제1] 숫자여러개를 array 자료에 저장해놨는데
-function Cleaning(arr :(number | string)[]) :number[] {
-    // [에러 원인] forEach는 원본을 변경하지만, ts는 이를 자동 추적을 안하기 때문에 내부 타입이 변경되어도 여전히 (number | string)[] 타입으로 간주함 
-    arr.forEach((number, index) => {
-        if (typeof number === 'string') {
-            arr[index] = parseInt(number, 10);
-        }
-    })
-    return arr; // 따라서 여기에 에러 발생함 --> 이 방법 말고, 그냥 새로운 배열을 만들어 반환할 것을 추천 
+// [숙제2] 다음과 같은 함수를 만들어보십시오.
+// 지금 여러 변수에 선생님이 가르치고 있는 과목이 저장이 되어있습니다.
+// '철수쌤' 같은 object 자료를 파라미터로 집어넣으면 그 선생님이 가르치고 있는 과목중 맨 뒤의 1개를 return 해주는 함수를 만들어봅시다.
+let 철수쌤 = { subject : 'math' }
+let 영희쌤 = { subject : ['science', 'english']}
+let 민수쌤 = { subject : ['science', 'art', 'korean']}
+
+function 맨뒤에(obj :{
+    subject : string | string[]
+}) {
+    if (typeof obj.subject === 'string') {
+        return obj['subject'];
+    }
+    else if (Array.isArray(obj.subject)) {
+        // array 자료형인지 확인하려면 typeof는 못쓰고 isArray써야함 
+        let 길이 = obj['subject'].length;
+        return obj['subject'][길이-1];
+    }
+    else {
+        return '없어'
+    }
 }
 
-console.log(Cleaning(['1', 2, '3']));
-
-
-// [정답 코드]
-function 클리닝함수(a :(number|string)[]){
-
-    let 클리닝완료된거 :number[] = [];
-  
-    a.forEach((b)=>{
-      if (typeof b === 'string') {
-        클리닝완료된거.push(parseFloat(b))
-      } else {
-        클리닝완료된거.push(b)
-      }
-    })
-  
-    return 클리닝완료된거
-  }
-  
-  console.log( 클리닝함수([123,'3']) )
+console.log(맨뒤에({subject : 'math'})) // 이 경우 'math'를 return
+console.log(맨뒤에({subject : ['science', 'art', 'korean']})) // 이 경우 'korean'을 return 
+console.log(맨뒤에({hello : 'hi'})) // 이 경우 타입에러 나면 됩니다
