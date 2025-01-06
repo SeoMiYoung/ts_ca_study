@@ -2,15 +2,19 @@
 
 function 내함수(x :number | string) {
     let array :number[] = [];
-    if (typeof x === 'number') {
-        array[0] = x;
-    }
+    array[0] = x as number; // x를 number타입으로 덮어써주세요 --> ts 컴파일러가 x를 number로 이해함
+
 }
 
 내함수(123);
 
-// <Narrowing으로 판정해주는 문법들>
-// --> 그냥 현재 변수의 타입이 뭔지 특정지을 수 있기만 하면, 다 인정해줌!!!! 
-//// typeof 변수
-//// 속성명 in 오브젝트자료
-//// 인스턴스 instanceof 부모 
+// <귀찮으면 assertion문법>
+// 말 그대로 타입을 덮어써주는거야 
+// 음.. 그치만.. assertion을 자주 쓰지는 마세요~^^
+//// 사실 as 문법의 용도는 다음과 같습니다.
+////// 1. Narrowing 할 때 씁니다.
+////// 2. 무슨 타입이 들어올지 100% 확실할 때 쓰셈
+
+// 참고로 옛날 as 문법은
+//// let 이름 :string = 'kim';
+//// <number>이름
