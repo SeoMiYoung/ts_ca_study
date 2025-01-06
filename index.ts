@@ -22,3 +22,14 @@ let 변수2 :string = 이름1; // 에러 발생 X --> 이름1이 any라서 쉴�
 let 이름 :unknown;
 이름 - 1; // unknown타입은 뺄셈을 못하게 되어있음
 
+// 타입스크립트는 타입이 엄격하다
+let 나이 :string | number;
+나이 + 1; 
+// 왜 안되나요? 사실상 union type은 새로운 타입 하나를 만든다고 보면 됨
+// string타입 + 1 (허용)
+// number타입 + 1 (허용)
+// string | number타입 + 1 (허용X)
+
+let 나이2 :unknown = 1;
+나이2 - 1; // 엄격하기 때문에 이것도 ㄴㄴ
+// 나중에 Narrowing / Assertion 같은거 배우면 에러같은거 해결 가능할거임 
