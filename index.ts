@@ -6,5 +6,9 @@ type AnimalType = string | number | undefined;
 
 let 동물 :AnimalType = 'kim';
 
+// <const 변수>
+const 출생지역 = { region : 'Seoul' }
 
+// 잠깐! const는 재할당을 막을뿐, 내부 수정은 막지 않음
+출생지역.region = 'Busan'; // 쌉가능 
 
