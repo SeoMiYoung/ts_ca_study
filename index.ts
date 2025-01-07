@@ -11,3 +11,14 @@ let test :ObjTypeAnd = {
     // 타입스크립트는 & 연산자를 사용해 타입을 교차시킬 때, 중복된 속성은 모든 타입이 동시에 만족해야 하는 값을 요구합니다.
     // 따라서 number & string은 둘 다 만족할 수 없으므로 불가능한 타입(never)이 됩니다.
 }
+
+// [숙제2] 다음 조건을 만족하는 타입을 만들어봅시다.
+type Assign2Type = {
+    color? : string,
+    size : number,
+    readonly position : number[],
+}
+let 테스트용변수 :Assign2Type = {
+    size : 123,
+    position : [1, 2, 3],
+}
