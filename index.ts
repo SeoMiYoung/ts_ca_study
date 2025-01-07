@@ -27,10 +27,21 @@ let 테스트용변수 :Assign2Type = {
 type Assign3Type = {
     name : string,
     phone : number,
-    email : string,
+    email? : string,
 }
 let 테스트용변수2 :Assign3Type = {
     name : 'kim',
     phone : 123,
     email : 'abc@naver.com'
+}
+
+// [숙제4] 다음을 만족하는 type alias를 만들어보십시오.
+type Assign4Type = Assign3Type & {
+    isAdult : boolean
+}
+
+let 회원가입정보 :Assign4Type = {
+    name : 'kim',
+    isAdult : false,
+    phone : 1234,
 }
