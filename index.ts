@@ -20,4 +20,6 @@ const 여친 :GirlFriendType = {
 }
 // 만약에 막고 싶으면? readonly 
 여친.name = '유라' // readonly로 인해 수정 불가 
+// 그치만, ts자체가 그냥 에러 표시 용도지, 실제 변환된 js파일은 에러 없고, 수정해줌
+
 
