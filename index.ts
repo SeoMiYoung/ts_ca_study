@@ -12,3 +12,12 @@ const 출생지역 = { region : 'Seoul' }
 // 잠깐! const는 재할당을 막을뿐, 내부 수정은 막지 않음
 출생지역.region = 'Busan'; // 쌉가능 
 
+type GirlFriendType = {
+    readonly name : string
+}
+const 여친 :GirlFriendType = {
+    name : '엠버'
+}
+// 만약에 막고 싶으면? readonly 
+여친.name = '유라' // readonly로 인해 수정 불가 
+
