@@ -1,18 +1,13 @@
-// object를 extend 한다 == 합친다 
-// 합치기(1)
-type Name = string;
-type Age = number;
-type Person = Name | Age; // union type으로 만듦
-
-// 합치기(2)
-type PositionX = {
-    x : number,
+// [숙제1] object 타입을 정의한 type alias 두개를 & 기호로 합칠 때, 중복된 속성이 있으면 어떻게 될까요?
+type ObjType1 = {
+    name : string,
 }
-type PositionY = {
-    y : number,
+type ObjType2 = {
+    name : number,
 }
-type NewType = PositionX & PositionY; // { x : number, y : number } 이렇게 합쳐짐
-
-// [참고]
-// 같은 이름의 type 변수 재정의 불가능
-type PositionX = string; // Duplicate identifier 'PositionX'에러 발생!
+type ObjTypeAnd = ObjType1 & ObjType2
+let test :ObjTypeAnd = {
+    name : 'Ming',
+    // 타입스크립트는 & 연산자를 사용해 타입을 교차시킬 때, 중복된 속성은 모든 타입이 동시에 만족해야 하는 값을 요구합니다.
+    // 따라서 number & string은 둘 다 만족할 수 없으므로 불가능한 타입(never)이 됩니다.
+}
