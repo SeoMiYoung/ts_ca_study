@@ -1,5 +1,5 @@
 var 제목 = document.querySelector('#title');
-if (제목 != null) {
+if (제목 instanceof Element) {
     // 참고로 typeof는 "object", "string"등의 기본 자료형만 확인합니다. 따라서 "Element"이런 확인은 ㄴㄴ
     // 만약에 DOM 객체인지 확인하려면 instanceof를 사용하세요. 
     제목.innerHTML = '반가워요';
