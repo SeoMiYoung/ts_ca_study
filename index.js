@@ -30,16 +30,7 @@ var removeDash = function (c) {
 };
 console.log(removeDash('-23--24---3'));
 console.log(removeDash('7---1-2-3-4-5---6'));
-// 내 답도 맞는데, 대표 답안은 이거임
-/*
-type CutType = (x :string) => string
-
-let cutZero :CutType = function (x){
-    let result = x.replace(/^0+/, "");
-    return result
+function 만들함수(str, func1, func2) {
+    return func2(func1(str)); // func2에 '콜백함수'사용 
 }
-function removeDash(x :string) :number{
-    let result = x.replace(/-/g, "");
-    return parseFloat(result)
-}
-*/ 
+console.log(만들함수('010-1111-2222', cutZero, removeDash));
