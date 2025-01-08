@@ -3,4 +3,4 @@
 
 ## 참고 링크
 - [자바스크립트 Class 설명](https://www.youtube.com/watch?v=dHrI-_xq1Vo&t=7s)
-- [prototype](https://www.youtube.com/watch?v=wUgmzvExL_E)
+- [자바스크립트 prototype 설명](https://www.youtube.com/watch?v=wUgmzvExL_E)
