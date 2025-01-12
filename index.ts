@@ -1,5 +1,8 @@
 class Person {
   data :number = 0; // 필드값
+  name :string; // name이라는 필드값을 미리 지정해줘야함 
+  // ts랑 js의 차이점
+  //// Typescript의 constructor()는 필드값에 어쩌구가 미리 있어야 this.어쩌구 가능! 
   constructor() {
     this.name = 'kim'
   }
