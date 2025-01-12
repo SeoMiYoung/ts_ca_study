@@ -21,3 +21,17 @@ console.log(사람1.name);
 console.log(사람2.name);
 사람1.함수1('hello');
 사람2.함수1('hi');
+// <숙제1> Car 클래스를 만들고 싶습니다.
+var Car = /** @class */ (function () {
+    function Car(model, price) {
+        this.model = model;
+        this.price = price;
+    }
+    Car.prototype.tax = function () {
+        return this.price / 10;
+    };
+    return Car;
+}());
+var car1 = new Car('소나타', 3000);
+console.log(car1); // 콘솔창 출력결과는 { model : '소나타', price : 3000 }
+console.log(car1.tax()); // 콘솔창 출력결과는 300 
